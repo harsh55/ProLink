@@ -2,3 +2,28 @@
 .photo-size {
     font-size: 250px;
 }
+
+.photo-list {
+    font-size: 100px;
+}
+
+.view {
+    text-align: right;
+}
+
+
+.text{
+    padding-left:10px ;
+}
+
+section {
+    height: 100%;
+}
+
+modal-window {
+    min-height: 100%;
+}
+.modal-backdrop{
+    bottom: 0;
+    position: fixed;
+}
