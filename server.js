@@ -30,6 +30,7 @@ require('./config/passport')();
 app.listen(config.port);
 
 // Expose app
+var exports;
 exports = module.exports = app;
 
 // Logging initialization
