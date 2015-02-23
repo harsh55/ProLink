@@ -1,0 +1,38 @@
+<section data-ng-controller="ProfilesController as profilesCtrl">
+    <div class="page-header">
+        <h1>Profiles</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" ng-model="searchText" placeholder="search profiles">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+
+    <div class="list-group">
+        <div class="col-xs-6 col-sm-4 extra-space" data-ng-repeat="profile in profilesCtrl.profiles | filter:searchText">
+            <a ng-click="profilesCtrl.modalview('lg', profile)" class="list-group-item">
+                <h4 class="text-center photo-list text-primary">
+                    <i class="glyphicon glyphicon-user"></i>
+                </h4>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <h4>{{profile.firstname}} {{profile.lastname}}</h4>
+                        <small class="list-group-item-text text-muted">
+                            <span data-ng-bind="profile.industry"></span>
+                        </small>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!profiles.$resolved || profiles.length">
+    	No Profiles yet, why don't you <a href="/#!/profiles/create">create one</a>?
+    </div>
+</section>

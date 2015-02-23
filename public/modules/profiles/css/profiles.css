@@ -27,3 +27,7 @@ modal-window {
     bottom: 0;
     position: fixed;
 }
+
+.extra-space{
+    padding-bottom: 15px;
+}

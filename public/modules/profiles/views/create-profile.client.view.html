@@ -1,0 +1,178 @@
+<section data-ng-controller="ProfilesCreateController">
+    <div class="page-header">
+        <h1>New Profile</h1>
+    </div>
+    <div class="col-md-12">
+
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+                <!--First row -->
+                <div class="row">
+                    <div class="form-group">
+                        <div data-ng-show="error" class="text-center text-danger">
+                            <div class="alert alert-danger" role="alert">
+                                <strong data-ng-bind="error"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <i class="glyphicon glyphicon-user photo-size text-primary"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="firstname">First Name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="firstname" id="firstname" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="lastname">Last Name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="lastname" id="lastname" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <div class="controls">
+                                <input type="email" data-ng-model="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Phone</label>
+                            <div class="controls">
+                                <input type="number" data-ng-model="phone" id="phone" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Second row -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="city">City</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="city" id="city" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="country">Country</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="country" id="country" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="dob">Date of Birth</label>
+                            <div class="controls">
+                                <input type="date" data-ng-model="dob" id="dob" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Third Row -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="position">Position</label>
+                            <div class="controls">
+                                <select data-ng-model="position" id="position" class="form-control">
+                                    <option value="frontend">Frontend Developer</option>
+                                    <option value="backend">Backend Developer</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="industry">Industry</label>
+                            <div class="controls">
+                                <select data-ng-model="industry" id="industry" class="form-control">
+                                    <option value="it">IT</option>
+                                    <option value="automobile">Automobile</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fourth row -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label" for="objective">Objective</label>
+                        <div class="controls">
+                            <textarea data-ng-model="objective" id="objective" class="form-control" placeholder="Enter Your Career Objective"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Fifth row -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label" for="skills">Skills</label>
+                        <div class="controls">
+                            <textarea data-ng-model="skills" id="skills" class="form-control" placeholder="ex. HTML, CSS, JavaScript,"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Sixth row -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label" for="wants">Wants</label>
+                        <div class="controls">
+                            <textarea data-ng-model="wants" id="wants" class="form-control" placeholder="ex. Looking for full time job,"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Seventh Row experience -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label" for="experience">Experience</label>
+                        <div class="controls">
+                            <textarea data-ng-model="experience" id="experience" class="form-control" placeholder="ex. duration, company, description..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Eighth Row  education-->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label" for="education">Education</label>
+                        <div class="controls">
+                            <textarea data-ng-model="education" id="education" class="form-control" placeholder="ex. university degree, name, duration, subjects..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--Ninth Row language and interest-->
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="language">Language</label>
+                            <div class="controls">
+                                <textarea data-ng-model="language" id="language" class="form-control" placeholder="ex. English, German..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="interest">Interest</label>
+                            <div class="controls">
+                                <textarea data-ng-model="interest" id="interest" class="form-control" placeholder="ex. Reading, Sport..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Submit Button -->
+                <div class="row">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-success">
+                            Save & Close
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

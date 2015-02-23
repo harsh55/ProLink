@@ -1,0 +1,100 @@
+<section data-ng-controller="ProfilesController as profilesCtrl">
+
+		<div class="modal-header">
+			<h1>{{profile.firstname}} {{profile.lastname}}
+				<a class="btn btn-danger pull-right btn-lg" data-ng-click="profilesCtrl.remove(profile);">
+					<i class="glyphicon glyphicon-trash"></i>
+				</a>
+				<a class="btn btn-warning pull-right btn-lg" data-ng-click="profilesCtrl.modalUpdate('lg', profile)">
+					<i class="glyphicon glyphicon-edit"></i>
+				</a>
+			</h1>
+		</div>
+
+		<div class="modal-body">
+			<div class="col-sm-6 text-center">
+				<i class="glyphicon glyphicon-user photo-size text-primary"></i>
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<label class="text-muted">First Name</label>
+					<h3 data-ng-bind="profile.firstname" class="text"></h3>
+				</div>
+				<div>
+					<label class="text-muted">Last Name</label>
+					<h3 data-ng-bind="profile.lastname" class="text"></h3>
+				</div>
+				<div>
+					<label class="text-muted">E-mail</label>
+					<h3 data-ng-bind="profile.email" class="text"></h3>
+				</div>
+				<div>
+					<label class="text-muted">Phone No</label>
+					<h3 data-ng-bind="profile.phone" class="text"></h3>
+				</div>
+			</div>
+
+			<!--Second row -->
+			<div class="row">
+				<div class="col-sm-4">
+					<label class="text-muted">City</label>
+					<h3 data-ng-bind="profile.city"></h3>
+				</div>
+				<div class="col-sm-4">
+					<label class="text-muted">Country</label>
+					<h3 data-ng-bind="profile.country"></h3>
+				</div>
+				<div class="col-sm-4">
+					<label class="text-muted">Date of Birth</label>
+					<h3 data-ng-bind="profile.dob"></h3>
+				</div>
+			</div>
+			<!--Third Row -->
+			<div class="row">
+				<div class="col-sm-6">
+					<label class="text-muted">Position</label>
+					<h3 data-ng-bind="profile.position"></h3>
+				</div>
+				<div class="col-sm-6">
+					<label class="text-muted">Industry</label>
+					<h3 data-ng-bind="profile.industry"></h3>
+				</div>
+			</div>
+			<!--Fourth row -->
+			<div class="row">
+				<div class="col-sm-12 col-sm-offset-1">
+					<label class="text-muted">Objective</label>
+					<h3 data-ng-bind="profile.objective"></h3>
+				</div>
+			</div>
+			<!--Fifth row -->
+			<div class="row">
+				<div class="col-sm-12 col-sm-offset-1">
+					<label class="text-muted">Skills</label>
+					<h3 data-ng-bind="profile.skills"></h3>
+				</div>
+			</div>
+			<!--Sixth row -->
+			<div class="row">
+				<div class="col-sm-12 col-sm-offset-1">
+					<label class="text-muted">Wants</label>
+					<h3 data-ng-bind="profile.wants"></h3>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary" ng-click="ok()">OK</button>
+		</div>
+		<div class="text-right">
+			<small>
+				<em class="text-muted">
+					Posted on
+					<span data-ng-bind="profile.created | date:'mediumDate'"></span>
+					by
+					<span data-ng-bind="profile.user.displayName"></span>
+				</em>
+			</small>
+		</div>
+</section>
+
+
